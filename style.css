@@ -219,7 +219,7 @@ body {
 }
 
 /* ===========================
-   DECORATION
+   DECOR
 =========================== */
 
 .coin{
@@ -399,43 +399,7 @@ body {
     color:#cfd5ff;
 }
 
-/*==========================
-     Responsive
-===========================*/
 
-@media(max-width:1000px){
-
-.footer-container{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-}
-
-@media(max-width:700px){
-
-.footer-container{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.socials{
-
-justify-content:center;
-
-}
-
-.stores{
-
-align-items:center;
-
-}
-
-}
 /*============================
 APPLICATION
 =============================*/
@@ -527,94 +491,244 @@ APPLICATION
     max-width:100%;
 }
 /*====================================
-      Responsive Téléphone
+        RESPONSIVE TABLETTE
 ====================================*/
 
-@media (max-width: 768px) {
+@media (max-width:1000px){
 
-    .topbar {
-        padding: 0 15px;
-        height: 70px;
+    .content h1{
+        font-size:45px;
     }
 
-    .logo-container h2 {
-        font-size: 18px;
+    .search-box input{
+        width:400px;
     }
 
-    .buttons {
-        gap: 8px;
+
+    .footer-container{
+        grid-template-columns:1fr 1fr;
+        gap:40px;
     }
+
+
+    .app-section{
+        padding:70px 5%;
+    }
+
+
+    .app-left h2{
+        font-size:40px;
+    }
+
+
+    .app-right img{
+        width:350px;
+    }
+
+}
+
+
+/*====================================
+        RESPONSIVE TELEPHONE
+====================================*/
+
+@media (max-width:700px){
+
+    body{
+        padding-top:70px;
+    }
+
+
+    /* HEADER */
+
+    .topbar{
+        height:70px;
+        padding:0 15px;
+    }
+
+
+    .logo{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
+
+
+    .logo-container{
+        gap:8px;
+    }
+
+
+    .logo-container h2{
+        font-size:17px;
+    }
+
+
+    .buttons{
+        gap:6px;
+    }
+
 
     .login-btn,
-    .signup-btn {
-        width: 85px;
-        height: 40px;
-        font-size: 14px;
+    .signup-btn{
+        width:75px;
+        height:36px;
+        font-size:13px;
     }
 
-    .hero {
-        padding: 50px 20px;
-        min-height: auto;
+
+
+    /* HERO */
+
+    .hero{
+        min-height:auto;
+        padding:70px 20px;
     }
 
-    .content h1 {
-        font-size: 34px;
-        line-height: 1.3;
+
+    .content h1{
+        font-size:32px;
+        line-height:1.3;
     }
 
-    .content p {
-        font-size: 16px;
-        padding: 0 10px;
+
+    .content p{
+        font-size:16px;
+        margin-top:20px;
     }
 
-    .search-box {
-        flex-direction: column;
-        align-items: center;
+
+    .separator{
+        width:60px;
     }
 
-    .search-box input {
-        width: 100%;
-        max-width: 350px;
+
+
+    /* SEARCH */
+
+    .search-box{
+        flex-direction:column;
+        align-items:center;
+        margin-top:35px;
     }
 
-    .search-box button {
-        width: 100%;
-        max-width: 350px;
+
+    .search-box input{
+        width:100%;
+        max-width:330px;
+        height:52px;
+        font-size:16px;
     }
 
-    .app-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 20px;
+
+    .search-box button{
+        width:100%;
+        max-width:330px;
+        height:52px;
+        font-size:17px;
     }
 
-    .app-left h2 {
-        font-size: 32px;
+
+
+    /* DECORATION */
+
+    .coin{
+        width:70px;
     }
 
-    .app-left p {
-        font-size: 17px;
+
+    .coin1{
+        left:-20px;
+        top:120px;
     }
 
-    .store-buttons {
-        justify-content: center;
+
+    .coin2{
+        right:-20px;
+        top:80px;
     }
 
-    .app-right img {
-        width: 280px;
+
+    .coin3{
+        right:15px;
+        bottom:30px;
     }
 
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
+
+
+    /* APPLICATION */
+
+    .app-section{
+        flex-direction:column;
+        text-align:center;
+        padding:55px 20px;
+        gap:35px;
     }
 
-    .socials {
-        justify-content: center;
+
+    .app-left{
+        min-width:auto;
     }
 
-    .stores {
-        align-items: center;
+
+    .app-left h2{
+        font-size:30px;
     }
+
+
+    .app-left p{
+        font-size:16px;
+    }
+
+
+    .store-buttons{
+        justify-content:center;
+    }
+
+
+    .store-buttons img{
+        height:50px;
+    }
+
+
+    .app-right{
+        min-width:auto;
+    }
+
+
+    .app-right img{
+        width:270px;
+    }
+
+
+
+    /* FOOTER */
+
+    .footer{
+        padding:50px 20px 20px;
+    }
+
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:35px;
+    }
+
+
+    .socials{
+        justify-content:center;
+    }
+
+
+    .stores{
+        align-items:center;
+    }
+
+
+    .qr{
+        width:120px;
+    }
+
 
 }
