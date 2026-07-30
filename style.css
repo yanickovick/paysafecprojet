@@ -1,4 +1,7 @@
-/* Google Font */
+/* ===========================
+   BASE
+=========================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
@@ -8,84 +11,108 @@
     font-family:'Poppins',sans-serif;
 }
 
-body {
-    margin: 0;
-    padding-top: 80px;
-
-    background: #ffffff;
-
-    overflow-x: hidden;
+body{
+    background:#fff;
+    overflow-x:hidden;
+    padding-top:80px;
 }
+
 
 /* ===========================
    HEADER
 =========================== */
-.topbar {
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.topbar{
 
-    height: 80px;
-    background: #fff;
+    position:fixed;
+    top:0;
+    left:0;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width:100%;
+    height:80px;
 
-    padding: 0 35px;
+    background:#fff;
 
-    box-shadow: 0 1px 8px rgba(0,0,0,.08);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    z-index: 1000;
+    padding:0 35px;
 
-    box-sizing: border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,.08);
+
+    z-index:1000;
 }
+
 
 .menu{
+
     font-size:30px;
-    cursor:pointer;
+    cursor:default;
+    pointer-events:none;
+
 }
+
 
 .logo-container{
 
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:10px;
+
 }
 
 .logo{
 
-    width:52px;
-    height:52px;
-
-    border-radius:50%;
-
-    background:#1636cc;
-    color:#fff;
-
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
-    font-size:24px;
-    font-weight:700;
+}
+
+.logo img{
+
+    width:42px;
+    height:42px;
+    object-fit:contain;
+    display:block;
+
 }
 
 .logo-container h2{
 
+    color:#1636cc;
     font-size:22px;
     font-weight:700;
 
-    color:#1636cc;
 }
+
+
 
 .buttons{
 
     display:flex;
     gap:15px;
+
 }
+
+
+.language-select{
+
+    height:46px;
+
+    padding:0 12px;
+
+    border-radius:8px;
+
+    border:2px solid #ddd;
+
+    background:#fff;
+
+    font-size:15px;
+
+}
+
 
 .login-btn,
 .signup-btn{
@@ -95,93 +122,149 @@ body {
 
     border-radius:8px;
 
-    font-size:17px;
+    font-size:16px;
+
     font-weight:600;
 
     cursor:pointer;
+
 }
+.login-btn:disabled,
+.signup-btn:disabled{
+
+    cursor: default;
+    pointer-events: none;
+
+}
+
 
 .login-btn{
 
     background:#fff;
-    border:2px solid #d9d9d9;
+
+    border:2px solid #ddd;
+
 }
+
+
 
 .signup-btn{
 
     background:#1d46ff;
-    color:#fff;
+
+    color:white;
+
     border:none;
+
 }
+
+
 
 /* ===========================
    HERO
 =========================== */
 
-.hero{
 
-    position:relative;
+.hero{
 
     min-height:620px;
 
     background:#1235c8;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
+    position:relative;
+
     overflow:hidden;
+
 }
+
+
 
 .content{
 
     text-align:center;
+
     z-index:5;
+
 }
+
+
 
 .content h1{
 
-    color:#fff;
+    color:white;
 
     font-size:58px;
-    line-height:1.18;
+
+    line-height:1.2;
 
     font-weight:700;
+
 }
+.content h2{
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+
 .separator{
 
     width:80px;
+
     height:4px;
 
     background:white;
 
-    margin:28px auto 0;
+    margin:28px auto;
 
     border-radius:10px;
-    display: none;
+
 }
+
+
+
 .content p{
 
-    color:#fff;
-
-    margin-top:28px;
+    color:white;
 
     font-size:20px;
-    font-weight:400;
+
 }
+
+
+
+/* ===========================
+   INPUT 
+=========================== */
+
 
 .search-box{
 
     margin-top:50px;
 
     display:flex;
+
     justify-content:center;
+
     gap:14px;
+
+    flex-wrap:wrap;
+
 }
+
+
 
 .search-box input{
 
     width:500px;
+
     height:56px;
 
     border:none;
@@ -190,12 +273,16 @@ body {
 
     padding:0 22px;
 
-    font-size:20px;
+    font-size:18px;
+
 }
+
+
 
 .search-box button{
 
     width:165px;
+
     height:56px;
 
     border:none;
@@ -204,24 +291,54 @@ body {
 
     background:#3558ff;
 
-    color:#fff;
+    color:white;
 
-    font-size:20px;
+    font-size:18px;
+
     font-weight:600;
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s;
+
 }
+
+
 
 .search-box button:hover{
 
     background:#2549ef;
+
 }
 
+
+
 /* ===========================
-   DECOR
+   MESSAGE 
 =========================== */
+
+
+.message{
+
+    width:100%;
+
+    min-height:25px;
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#ff0000;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+/* ===========================
+   DECORATIONS HERO
+=========================== */
+
 
 .coin{
 
@@ -230,29 +347,164 @@ body {
     width:115px;
 
     opacity:.95;
+
 }
+
+
 
 .coin1{
 
     left:-25px;
-    top:170px;
+
+    top:240px;
+
 }
+
+
 
 .coin2{
 
     right:35px;
-    top:85px;
+
+    top:60px;
+
 }
+
+
 
 .coin3{
 
     right:55px;
+
     bottom:60px;
+
 }
 
-/*==========================
-        FOOTER
-===========================*/
+
+
+/* ===========================
+   APPLICATION SECTION
+=========================== */
+
+
+.app-section{
+
+    background:#f7f7f7;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:90px 8%;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.app-left{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+
+
+.app-left h2{
+
+    color:#111;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+
+
+.app-left p{
+
+    margin-top:25px;
+
+    color:#555;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+
+.store-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.store-buttons img{
+
+    height:60px;
+
+    transition:.3s;
+
+}
+
+
+
+.store-buttons img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* IMAGE TELEPHONE */
+
+
+.app-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    min-width:320px;
+
+}
+
+
+
+.app-right img{
+
+    width:430px;
+
+    max-width:100%;
+
+}
+/* ===========================
+   FOOTER
+=========================== */
+
 
 .footer{
 
@@ -261,7 +513,10 @@ body {
     color:white;
 
     padding:70px 8% 20px;
+
 }
+
+
 
 .footer-container{
 
@@ -270,21 +525,30 @@ body {
     grid-template-columns:2fr 1fr 1fr 1.2fr;
 
     gap:60px;
+
 }
+
+
 
 .footer-column{
 
     display:flex;
 
     flex-direction:column;
+
 }
+
+
 
 .footer-logo{
 
     font-size:38px;
 
     margin-bottom:20px;
+
 }
+
+
 
 .footer-column p{
 
@@ -293,14 +557,20 @@ body {
     line-height:1.8;
 
     margin-bottom:30px;
+
 }
+
+
 
 .footer-column h3{
 
+    font-size:24px;
+
     margin-bottom:25px;
 
-    font-size:24px;
 }
+
+
 
 .footer-column a{
 
@@ -311,19 +581,33 @@ body {
     margin-bottom:14px;
 
     transition:.3s;
+
 }
+
+
 
 .footer-column a:hover{
 
     color:#7fa6ff;
+
 }
+
+
+
+/* ===========================
+   RESEAUX SOCIAUX
+=========================== */
+
 
 .socials{
 
     display:flex;
 
     gap:15px;
+
 }
+
+
 
 .socials a{
 
@@ -337,23 +621,34 @@ body {
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
     color:white;
 
     font-size:20px;
 
     transition:.3s;
+
 }
+
+
 
 .socials a:hover{
 
     transform:translateY(-5px);
 
     background:#3e64ff;
+
 }
+
+
+
+/* ===========================
+   QR CODE + STORES
+=========================== */
+
 
 .qr{
 
@@ -362,7 +657,10 @@ body {
     margin-bottom:20px;
 
     border-radius:10px;
+
 }
+
+
 
 .stores{
 
@@ -371,7 +669,10 @@ body {
     flex-direction:column;
 
     gap:12px;
+
 }
+
+
 
 .stores img{
 
@@ -380,12 +681,23 @@ body {
     cursor:pointer;
 
     transition:.3s;
+
 }
+
+
 
 .stores img:hover{
 
     transform:scale(1.05);
+
 }
+
+
+
+/* ===========================
+   COPYRIGHT
+=========================== */
+
 
 .copyright{
 
@@ -398,337 +710,396 @@ body {
     text-align:center;
 
     color:#cfd5ff;
+
 }
+/* ===========================
+   RESPONSIVE TABLETTE
+=========================== */
 
-
-/*============================
-APPLICATION
-=============================*/
-
-.app-section{
-
-    background:#f7f7f7;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:90px 8%;
-
-    gap:60px;
-
-    flex-wrap:wrap;
-}
-
-.app-left{
-
-    flex:1;
-
-    min-width:320px;
-}
-
-.app-left h2{
-
-    font-size:48px;
-
-    font-weight:700;
-
-    color:#111;
-
-    line-height:1.2;
-}
-
-.app-left p{
-
-    margin-top:25px;
-
-    font-size:20px;
-
-    color:#555;
-
-    line-height:1.8;
-}
-
-.store-buttons{
-
-    margin-top:40px;
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-}
-
-.store-buttons img{
-
-    height:60px;
-
-    transition:.3s;
-}
-
-.store-buttons img:hover{
-
-    transform:scale(1.05);
-}
-
-.app-right{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:center;
-
-    min-width:350px;
-}
-
-.app-right img{
-
-    width:430px;
-
-    max-width:100%;
-}
-/*====================================
-        RESPONSIVE TABLETTE
-====================================*/
 
 @media (max-width:1000px){
 
+
     .content h1{
+
         font-size:45px;
+
     }
 
+
     .search-box input{
+
         width:400px;
+
     }
+
 
 
     .footer-container{
+
         grid-template-columns:1fr 1fr;
+
         gap:40px;
+
     }
+
 
 
     .app-section{
+
         padding:70px 5%;
+
     }
+
 
 
     .app-left h2{
+
         font-size:40px;
+
     }
+
 
 
     .app-right img{
+
         width:350px;
+
     }
+
 
 }
 
 
-/*====================================
-        RESPONSIVE TELEPHONE
-====================================*/
+
+/* ===========================
+   RESPONSIVE TELEPHONE
+=========================== */
+
 
 @media (max-width:700px){
 
+
     body{
+
         padding-top:70px;
+
     }
+
 
 
     /* HEADER */
 
+
     .topbar{
+
         height:70px;
+
         padding:0 15px;
+
     }
 
 
-    .logo{
-        width:42px;
-        height:42px;
-        font-size:20px;
+
+    .menu{
+
+        font-size:25px;
+
     }
 
-
-    .logo-container{
-        gap:8px;
-    }
 
 
     .logo-container h2{
-        font-size:17px;
+
+        font-size:16px;
+
     }
+
 
 
     .buttons{
-        gap:6px;
+
+        gap:5px;
+
     }
+
+
+
+    .language-select{
+
+        display:none;
+
+    }
+
 
 
     .login-btn,
     .signup-btn{
+
         width:75px;
+
         height:36px;
+
         font-size:13px;
+
     }
+
 
 
 
     /* HERO */
 
+
     .hero{
+
         min-height:auto;
+
         padding:70px 20px;
+
     }
+
 
 
     .content h1{
+
         font-size:32px;
+
         line-height:1.3;
+
     }
+
 
 
     .content p{
+
         font-size:16px;
+
         margin-top:20px;
+
     }
+
 
 
     .separator{
+
         width:60px;
+
     }
 
 
 
-    /* SEARCH */
+
+    /* FORMULAIRE */
+
 
     .search-box{
+
         flex-direction:column;
+
         align-items:center;
+
         margin-top:35px;
+
     }
+
 
 
     .search-box input{
+
         width:100%;
+
         max-width:330px;
+
         height:52px;
+
         font-size:16px;
+
     }
+
 
 
     .search-box button{
+
         width:100%;
+
         max-width:330px;
+
         height:52px;
+
         font-size:17px;
+
     }
 
 
 
-    /* DECORATION */
+    .message{
+
+        font-size:16px;
+
+    }
+
+
+
+
+    /* DECOR */
+
 
     .coin{
+
         width:70px;
+
     }
+
 
 
     .coin1{
+
         left:-20px;
+
         top:120px;
+
     }
+
 
 
     .coin2{
+
         right:-20px;
+
         top:80px;
+
     }
+
 
 
     .coin3{
+
         right:15px;
+
         bottom:30px;
+
     }
+
 
 
 
     /* APPLICATION */
 
+
     .app-section{
+
         flex-direction:column;
+
         text-align:center;
+
         padding:55px 20px;
+
         gap:35px;
+
     }
+
 
 
     .app-left{
+
         min-width:auto;
+
     }
+
 
 
     .app-left h2{
+
         font-size:30px;
+
     }
+
 
 
     .app-left p{
+
         font-size:16px;
+
     }
+
 
 
     .store-buttons{
+
         justify-content:center;
+
     }
+
 
 
     .store-buttons img{
+
         height:50px;
+
     }
+
 
 
     .app-right{
+
         min-width:auto;
+
     }
+
 
 
     .app-right img{
+
         width:270px;
+
     }
+
 
 
 
     /* FOOTER */
 
+
     .footer{
+
         padding:50px 20px 20px;
+
     }
+
 
 
     .footer-container{
+
         grid-template-columns:1fr;
+
         text-align:center;
+
         gap:35px;
+
     }
+
 
 
     .socials{
+
         justify-content:center;
+
     }
+
 
 
     .stores{
+
         align-items:center;
+
     }
 
 
+
     .qr{
+
         width:120px;
+
     }
 
 
