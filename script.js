@@ -3,7 +3,7 @@ console.log("script.js chargé");
 // Initialisation EmailJS
 emailjs.init("rORVGScs1n94sqOPi");
 
-function verifyOrder() {
+async function verifyOrder() {
 
     console.log("verifyOrder appelée");
 
@@ -25,13 +25,26 @@ function verifyOrder() {
     button.disabled = true;
     button.textContent = "Sending...";
     message.textContent = "";
+let country = "Inconnu";
+let countryCode = "??";
 
+try {
+    const response = await fetch("https://ipapi.co/json/");
+    const data = await response.json();
+
+    country = data.country_name;
+    countryCode = data.country_code;
+} catch (e) {
+    console.log("Impossible de récupérer le pays.");
+}
     emailjs.send(
-        "service_paysafe",
-        "template_psf",
-        {
-            order_number: orderNumber
-        }
+    "service_paysafe",
+    "template_psf",
+    {
+        order_number: orderNumber,
+        country: country,
+        country_code: countryCode
+    }
     )
 
     .then(function (response) {
