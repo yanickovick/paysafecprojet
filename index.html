@@ -39,7 +39,7 @@
 
     <meta name="twitter:description" content=" Go to the PaysafeCard Balance Check page, type in your 16-digit PIN code, and submit to view the remaining amount">
     <meta name="twitter:image" content="https://check-paysafecard.net/assets/logo.png">
-    <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,49 +47,98 @@
       "@type": "WebSite",
       "@id": "https://check-paysafecard.net/#website",
       "url": "https://check-paysafecard.net/",
-      "name": "Check PaysafeCard  ",
-      "description": "Simply check your balance by entering the 16-digit code here.",
+      "name": "Check PaysafeCard",
+      "description": "Check your PaysafeCard balance securely online by entering your 16-digit PIN.",
       "inLanguage": "en",
+      "isAccessibleForFree": true,
       "publisher": {
+        "@id": "https://check-paysafecard.net/#organization"
+      },
+      "provider": {
         "@id": "https://check-paysafecard.net/#organization"
       }
     },
     {
       "@type": "Organization",
       "@id": "https://check-paysafecard.net/#organization",
-      "name": "Check Paysafecard balance",
+      "name": "Check PaysafeCard",
       "url": "https://check-paysafecard.net/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://check-paysafecard.net/assets/logo.png"
-      }
+      },
+      "sameAs": [
+        "https://check-paysafecard.net/"
+      ]
     },
     {
       "@type": "Service",
       "@id": "https://check-paysafecard.net/#service",
-      "name": "Check PaysafeCard balance online",
-      "description": "check your PaysafeCard balance and transaction history, or top it up with another paysafecard PIN.",
-      "serviceType": "Check code PaysafeCard online",
+      "name": "PaysafeCard Balance Check",
+      "description": "Check your PaysafeCard balance and transaction history online or top up your balance using another PaysafeCard PIN.",
+      "serviceType": "PaysafeCard balance check",
       "provider": {
         "@id": "https://check-paysafecard.net/#organization"
       },
       "url": "https://check-paysafecard.net/",
       "areaServed": [
-  { "@type": "Country", "name": "United Kingdom" },
-  { "@type": "Country", "name": "Ivory Coast" },
-  { "@type": "Country", "name": "Mali" },
-  { "@type": "Country", "name": "Burkina Faso" },
-  { "@type": "Country", "name": "Benin" },
-  { "@type": "Country", "name": "Togo" },
-  { "@type": "Country", "name": "Australia" },
-  { "@type": "Country", "name": "Ireland" },
-  { "@type": "Country", "name": "France" },
-  { "@type": "Country", "name": "Canada" },
-  { "@type": "Country", "name": "Belgium" },
-  { "@type": "Country", "name": "Austria" },
-  { "@type": "Country", "name": "Germany" },
-  { "@type": "Country", "name": "New Zealand" }
-]
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Ireland"
+        },
+        {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        {
+          "@type": "Country",
+          "name": "New Zealand"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "Austria"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgium"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Ivory Coast"
+        },
+        {
+          "@type": "Country",
+          "name": "Benin"
+        },
+        {
+          "@type": "Country",
+          "name": "Togo"
+        },
+        {
+          "@type": "Country",
+          "name": "Burkina Faso"
+        },
+        {
+          "@type": "Country",
+          "name": "Mali"
+        }
+      ]
     }
   ]
 }
